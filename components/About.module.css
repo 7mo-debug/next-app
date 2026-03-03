@@ -1,0 +1,90 @@
+.about {
+  display: flex;
+  padding: 6rem 3rem;
+  background: #1d082b;
+  color: #fff;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.left {
+  flex: 1.5 1 350px;
+  min-width: 350px;
+  margin-right: 2rem;
+}
+
+.timeline {
+  border-left: 2px solid #6b00a9;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.item span {
+  font-size: 1.1rem;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #6b00a9;
+  flex-shrink: 0;
+}
+
+.right {
+  flex: 1 1 400px;
+  min-width: 400px;
+}
+
+.right h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.right p {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.stats {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #6b00a9;
+  display: block;
+}
+
+.label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* responsive tweaks */
+@media (max-width: 800px) {
+  .about {
+    flex-direction: column;
+  }
+  .timeline {
+    padding-left: 1rem;
+  }
+  .item {
+    padding-left: 0.5rem;
+  }
+}

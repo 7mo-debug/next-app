@@ -1,0 +1,163 @@
+.contact {
+  background: #1d082b;
+  color: #fff;
+  padding: 6rem 3rem;
+}
+
+/* header bar with text on right end */
+.contact {
+  background: #1d082b;
+  color: #fff;
+  padding: 6rem 3rem;
+}
+
+/* header bar with text on right end */
+.titleBar {
+  display: flex;
+  align-items: flex-end; /* 🔥 align to bottom */
+  gap: 10px; /* 🔥 creates space between text & line */
+
+  margin-bottom: 3rem;
+  margin-left: -6rem;
+  margin-right: 1150px;
+  padding-left: 2rem;
+}
+
+.titleBar::before {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: #6b00a9;
+  margin-bottom: 6px; /* 🔥 fine-tune vertical alignment */
+}
+
+.titleBar span {
+  margin-left: auto;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.info {
+  flex: 1 1 300px;
+  position: relative;
+}
+
+.info h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.submit {
+  background: #6b00a9;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+.submit:hover {
+  background: #7b00c2;
+}
+
+.form {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form input,
+.form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem 0;
+  outline: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 800px) {
+  .inner {
+    flex-direction: column;
+  }
+}
+
+
+.titleBar span {
+  margin-left: auto;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.info {
+  flex: 1 1 300px;
+  position: relative;
+}
+
+.info h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.submit {
+  background: #6b00a9;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+.submit:hover {
+  background: #7b00c2;
+}
+
+.form {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form input,
+.form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem 0;
+  outline: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 800px) {
+  .inner {
+    flex-direction: column;
+  }
+}
