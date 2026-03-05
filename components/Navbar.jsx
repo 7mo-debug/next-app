@@ -40,6 +40,23 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // close menu when clicking outside or on a link
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (!menuOpen) return;
+      const nav = document.querySelector(`.${styles.nav}`);
+      if (nav && !nav.contains(e.target)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [menuOpen]);
+
+  const handleLinkClick = () => {
+    if (menuOpen) setMenuOpen(false);
+  };
+
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.logo}>
@@ -57,6 +74,7 @@ export default function Navbar() {
         <li>
           <Link
             href="#home"
+            onClick={handleLinkClick}
             className={active === "home" ? styles.activeLink : ""}
           >
             Home
@@ -66,6 +84,7 @@ export default function Navbar() {
         <li>
           <Link
             href="#about"
+            onClick={handleLinkClick}
             className={active === "about" ? styles.activeLink : ""}
           >
             About
@@ -75,6 +94,7 @@ export default function Navbar() {
         <li>
           <Link
             href="#projects"
+            onClick={handleLinkClick}
             className={active === "projects" ? styles.activeLink : ""}
           >
             Projects
@@ -84,6 +104,7 @@ export default function Navbar() {
         <li>
           <Link
             href="#contact"
+            onClick={handleLinkClick}
             className={active === "contact" ? styles.activeLink : ""}
           >
             Contacts

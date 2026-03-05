@@ -69,7 +69,6 @@
 }
 
 .greeting {
-  
   font-size: 80px;
   color: #ec7ae3cf;
   line-height: 1;
@@ -77,15 +76,14 @@
 
 .dot {
   display: inline-block;
-  width: 14px;        /* adjust size */
+  width: 14px; /* adjust size */
   height: 14px;
   background-color: #ec7ae3cf;
   border-radius: 50%;
   margin-left: 5px;
   transform: translateY(18px); /* tweak until baseline matches */
   margin-bottom: 20px;
-
-} 
+}
 
 .name {
   font-size: 80px;
@@ -108,9 +106,14 @@
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
-.primary:hover{
-  background:#7b00c2 ;
+.primary:hover {
+  background: #7b00c2;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(107,0,169,0.6);
 }
 
 .secondary {
@@ -119,9 +122,14 @@
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
-.secondary:hover{
-  border: 2px solid #7b00c2 ;
+.secondary:hover {
+  border: 2px solid #7b00c2;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(107,0,169,0.6);
 }
 
 .skills {
@@ -134,4 +142,35 @@
 
 .skills li {
   list-style: none;
+}
+
+/* responsive hero sizing */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 120vh;
+  }
+  .greeting,
+  .name {
+    font-size: 50px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting,
+  .name {
+    font-size: 36px;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .skills {
+    font-size: 0.8rem;
+  }
 }

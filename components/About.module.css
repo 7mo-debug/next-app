@@ -9,9 +9,8 @@
 }
 
 .left {
-  flex: 1.5 1 350px;
-  min-width: 350px;
-  margin-right: 2rem;
+  flex: 1.5;
+  min-width: 0;
 }
 
 .timeline {
@@ -39,8 +38,8 @@
 }
 
 .right {
-  flex: 1 1 400px;
-  min-width: 400px;
+  flex: 1;
+  min-width: 0;
 }
 
 .right h2 {
@@ -76,15 +75,68 @@
   opacity: 0.8;
 }
 
-/* responsive tweaks */
+/* 📱 Mobile */
+
 @media (max-width: 800px) {
   .about {
     flex-direction: column;
+    padding: 3rem 1.5rem;
   }
-  .timeline {
-    padding-left: 1rem;
+
+  .right {
+    order: 1;
+    width: 100%;
   }
-  .item {
-    padding-left: 0.5rem;
+
+  .left {
+    order: 2;
+    width: 100%;
   }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* timeline glow */
+
+.timeline {
+  border-left: 2px solid #6b00a9;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  position: relative;
+}
+
+/* items hover */
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.item:hover {
+  transform: translateX(6px);
+}
+
+/* icon glow */
+
+.icon {
+  font-size: 2rem;
+  color: #6b00a9;
+  transition:
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.item:hover .icon {
+  transform: scale(1.15);
+  text-shadow: 0 0 12px #6b00a9;
 }

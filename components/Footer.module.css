@@ -5,6 +5,22 @@
   padding: 2rem 1rem;
 }
 
+/* footer mobile tweaks */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+  .footer .name {
+    font-size: 1rem;
+  }
+  .footer .copy {
+    font-size: 0.8rem;
+  }
+  .social {
+    gap: 1rem;
+  }
+}
+
 .footer .name {
   font-weight: bold;
   font-size: 1.25rem;
@@ -32,4 +48,12 @@
 /* icon hover accent */
 .social a:hover {
   color: #6b00a9;
+}
+
+.iconf {
+  transition: transform 0.3s ease;
+}
+
+.iconf:hover {
+  transform: scale(1.3);
 }

@@ -1,11 +1,21 @@
 "use client";
 import { useEffect, useRef } from "react";
 import styles from "./Hero.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Hero() {
   const backRef = useRef(null);
   const frontRef = useRef(null);
   const deskRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing:"ease-in-out"
+    });
+  }, []);
 
   useEffect(() => {
     const hero = backRef.current?.parentElement;
@@ -21,22 +31,16 @@ export default function Hero() {
 
       if (scrollInsideHero < 0 || scrollInsideHero > heroHeight) return;
 
-      
       let progress = scrollInsideHero / (heroHeight * 0.5);
 
-     
       progress = Math.min(Math.max(progress, 0), 1);
 
-     
-
-      
       backRef.current.style.transform = `translateY(${progress * 250}px)`;
       backRef.current.style.opacity = 1 - progress;
 
       frontRef.current.style.transform = `translateY(${progress * 350}px)`;
       frontRef.current.style.opacity = 1 - progress;
 
-      
       deskRef.current.style.transform = `translateX(${progress * 400}px)`;
       deskRef.current.style.opacity = 1 - progress;
     };
@@ -71,7 +75,7 @@ export default function Hero() {
           <a href="#contact" className={styles.primary}>
             Got a project?
           </a>
-          <a href="#resume" className={styles.secondary}>
+          <a href="#about" className={styles.secondary}>
             My resume
           </a>
         </div>

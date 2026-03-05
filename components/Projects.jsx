@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <div className={styles.all}>
-      <section id="projects" className={styles.about}>
+      <section id="projects" className={styles.about} >
         <div className={styles.head}>
           <h1 className={styles.header}>Projects</h1>
           <div className={styles.vline}></div>
@@ -13,9 +13,9 @@ export default function Projects() {
         </div>
 
         {/* ================= FIRST PROJECT ================= */}
-        <div className={styles.projectRow}>
+        <div className={styles.projectRow} data-aos="fade-right">
           {/* LEFT SIDE */}
-          <div style={{ marginLeft: "70px" }} className={styles.todos}>
+          <div className={styles.todos}>
             <h1 className={styles.todosHead}>Todos App</h1>
 
             <div className={styles.tags}>
@@ -39,11 +39,21 @@ export default function Projects() {
             </p>
 
             <div className={styles.buttons}>
-              <a href="#" className={styles.primary}>
+              <a
+                href="https://github.com/7mo-debug/next-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.primary}
+              >
                 View Github
               </a>
 
-              <Link href="#" className={styles.projectLink}>
+              <Link
+                href="https://amin-todos.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+              >
                 View project
                 <OpenInNewIcon fontSize="small" />
               </Link>
@@ -57,10 +67,7 @@ export default function Projects() {
         </div>
 
         {/* ================= SECOND PROJECT (REVERSED) ================= */}
-        <div
-          style={{ marginLeft: "70px" }}
-          className={`${styles.projectRow} ${styles.reverse}`}
-        >
+        <div className={`${styles.projectRow} ${styles.reverse}`} data-aos="fade-left">
           {/* LEFT SIDE (IMAGE NOW) */}
           <div className={styles.imageWrapper}>
             <img src="/weather.png" alt="Project 2 Preview" />
@@ -91,11 +98,21 @@ export default function Projects() {
             </p>
 
             <div className={styles.buttons}>
-              <a href="#" className={styles.primary}>
+              <a
+                href="https://github.com/7mo-debug/next-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.primary}
+              >
                 View Github
               </a>
 
-              <Link href="#" className={styles.projectLink}>
+              <Link
+                href="https://amins-weather-app.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+              >
                 View project
                 <OpenInNewIcon fontSize="small" />
               </Link>

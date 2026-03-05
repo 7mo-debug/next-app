@@ -51,6 +51,7 @@
 }
 
 .primary {
+  display: inline-block;
   background: #6b00a9;
   color: #fff;
   padding: 0.75rem 1.5rem;
@@ -58,9 +59,15 @@
   text-decoration: none;
   margin: 20px;
   margin-left: 24px;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
+
 .primary:hover {
   background: #7b00c2;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(107, 0, 169, 0.6);
 }
 
 .secondary {
@@ -74,7 +81,7 @@
   border: 2px solid #7b00c2;
 }
 .buttons {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .projectLink {
   position: relative;
@@ -87,7 +94,7 @@
   font-weight: 500;
   letter-spacing: 0.5px;
 
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 /* Same animated underline style as navbar */
@@ -114,6 +121,9 @@
 
 .projectLink:hover svg {
   transform: translateX(3px);
+}
+.projectLink:hover {
+  transform: scale(1.1);
 }
 
 /* Row layout */
@@ -173,4 +183,59 @@
 .imageWrapper {
   flex: 1;
   min-width: 0; /* 🔥 important */
+}
+/* tablet */
+
+@media (max-width: 1024px) {
+  .projectRow {
+    gap: 60px;
+    margin-top: 80px;
+  }
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+  .projectRow {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    height: 250px;
+    width: 100%;
+  }
+
+  .todos {
+    text-align: center;
+  }
+
+  .tags {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+/* small phones */
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 32px;
+  }
+
+  .about {
+    padding: 1.5rem 1rem;
+  }
 }

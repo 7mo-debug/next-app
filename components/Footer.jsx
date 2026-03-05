@@ -12,13 +12,13 @@ export default function Footer() {
       </p>
       <div className={styles.social}>
         <a href="#" aria-label="email">
-          <EmailIcon fontSize="large" />
+          <EmailIcon className={styles.iconf} fontSize="large" />
         </a>
-        <a href="#" aria-label="github">
-          <GitHubIcon fontSize="large" />
+        <a href="https://github.com/7mo-debug" target="_blank" rel="noopener noreferrer" aria-label="github">
+          <GitHubIcon className={styles.iconf} fontSize="large" />
         </a>
         <a href="#" aria-label="linkedin">
-          <LinkedInIcon fontSize="large" />
+          <LinkedInIcon className={styles.iconf} fontSize="large" />
         </a>
       </div>
     </footer>
