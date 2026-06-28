@@ -39,7 +39,7 @@ export default function Projects() {
 
             <div className={styles.buttons}>
               <a
-                href="https://github.com/7mo-debug/next-app"
+                href="https://github.com/Kar1mAhmed/Doc-Ahmed"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.primary}
@@ -98,7 +98,7 @@ export default function Projects() {
 
             <div className={styles.buttons}>
               <a
-                href="https://github.com/7mo-debug/next-app"
+                href="https://github.com/Kar1mAhmed/Emmal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.primary}
@@ -146,7 +146,7 @@ export default function Projects() {
 
             <div className={styles.buttons}>
               <a
-                href="https://github.com/7mo-debug/next-app"
+                href="https://github.com/Kar1mAhmed/Al-Saif"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.primary}
